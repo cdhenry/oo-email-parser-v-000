@@ -12,7 +12,7 @@ class EmailParser
   
   def parse
     array = @addresses.split(/,|\s/)
-    array.each {|email| email.delete_if{? 
+    array.delete_if {|email| email == ""} 
     array.uniq
   end
 end
