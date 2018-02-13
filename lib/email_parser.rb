@@ -12,5 +12,6 @@ class EmailParser
   
   def parse
     array = @addresses.split(/[,]|\s/)
+    array.unique
   end
 end
